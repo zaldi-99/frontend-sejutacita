@@ -1,0 +1,26 @@
+.category{
+  background-color: #fff;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.category-swiper {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.nav-link {
+  margin-right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
