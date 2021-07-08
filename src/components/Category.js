@@ -33,23 +33,27 @@ export default class Category extends Component {
     SwiperCore.use([Navigation]);
     return (
       <div className="category">
-        <Swiper
-          className="category-swiper"
-          slidesPerView={10}
-          navigation={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          {this.state.category.map((item) => (
-            <SwiperSlide className="swiper-item">
-              <Link to={item.name}>
-                <li className="nav-link" key={item.id}>
-                  {item.name}
-                </li>
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div class="category-wrapper">
+          <Swiper
+            className="category-swiper"
+            slidesPerView={10}
+            navigation={true}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {this.state.category.map((item) => (
+              <SwiperSlide className="swiper-item">
+                <ul className="nav-menu">
+                  <li className="nav-item" key={item.id}>
+                    <Link to={item.name} className="nav-link">
+                      {item.name}
+                    </Link>
+                  </li>
+                </ul>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     );
   }

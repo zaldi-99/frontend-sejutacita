@@ -12,6 +12,7 @@ function App() {
         <Category />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/TOP" exact component={Home} />
           <Route path="/showbiz" component={Showbiz} />
         </Switch>
       </Router>

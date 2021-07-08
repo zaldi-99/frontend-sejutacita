@@ -37,7 +37,7 @@ export default class Hero extends Component {
       <div className="hero-container">
         <Swiper
           pagination={true}
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 5000 }}
           className="hero-swiper"
           navigation={true}
         >
