@@ -16,14 +16,8 @@ function NewsItem(props) {
           >
             <p>{props.title}</p>
           </Link>
-          <Link
-            to={props.publisherLink}
-            className="publisher"
-            target={props.target}
-          >
-            <p>{props.publisher}</p>
-          </Link>
-          <Link to='/bookmark'>
+          <p className="publisher">{props.publisher}</p>
+          <Link to="/bookmark">
             <p>add to bookmark</p>
           </Link>
         </div>

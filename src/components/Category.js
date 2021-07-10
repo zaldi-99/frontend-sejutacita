@@ -5,7 +5,7 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Navigation } from "swiper/core";
 import "./Category.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default class Category extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ export default class Category extends Component {
               <SwiperSlide className="swiper-item">
                 <ul className="nav-menu">
                   <li className="nav-item" key={item.id}>
-                    <Link to={item.name} className="nav-link">
+                    <Link to={`/${item.name}`} className="nav-link">
                       {item.name}
                     </Link>
                   </li>
