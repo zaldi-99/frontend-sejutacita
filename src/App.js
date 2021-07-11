@@ -1,6 +1,6 @@
 import "./App.css";
 import { Category, Header } from "./components";
-import { Bookmark, Home, Showbiz } from "./pages";
+import { Home, MainPage } from "./pages";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function App() {
         <Header />
         <Category />
         <Switch>
-          <Route path="/" exact component={Showbiz} />
+          <Route path="/" exact component={MainPage} />
           <Route path="/:category" component={Home} />
           {/* <Route path="/bookmark" exact component={Bookmark} /> */}
         </Switch>

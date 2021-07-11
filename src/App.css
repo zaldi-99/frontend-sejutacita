@@ -17,11 +17,7 @@ body {
   width: 70%;
 }
 
-.bookmark {
-  color: #000;
+.home .home-title {
+  text-align: center;
+  padding-top: 10px;
 }
-
-/* .home {
-  position: relative;
-  height: 100%;
-} */

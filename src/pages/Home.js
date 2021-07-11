@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
 import "../components/News.css";
-import { Hero } from "../components";
 import NewsItem from "../components/NewsItem";
 import axios from "axios";
 import ParamMapping from "../utils/ParamMapping";
@@ -22,7 +21,7 @@ export default class Home extends Component {
       .then((res) => {
         console.log("response = ", res.data);
         const data =
-          res.data.result.categories[0].templates[categoryType].sections[0]
+          res.data.result.categories[categoryType].templates[1].sections[0]
             .articles;
         console.log("data : ", data);
         this.setState({ article: data });
@@ -40,7 +39,7 @@ export default class Home extends Component {
       .then((res) => {
         console.log("response = ", res.data);
         const data =
-          res.data.result.categories[0].templates[categoryType].sections[0]
+          res.data.result.categories[categoryType].templates[1].sections[0]
             .articles;
         console.log("data : ", data);
         this.setState({ article: data });
@@ -54,8 +53,11 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home">
+        <div className='home-title'>
+          <h2>{this.props.match.params.category}</h2>
+        </div>
+
         <div className="home-wrapper">
-          {/* <Hero /> */}
           <div className="news-container">
             {/* <h2>Top</h2> */}
             {this.state.article.map((item) => (
@@ -68,9 +70,6 @@ export default class Home extends Component {
                     target={"_blank"}
                     publisher={item.publisher}
                   />
-                  {/* <div class="button">
-                <button>Bookmark</button>
-              </div> */}
                 </div>
               </>
             ))}

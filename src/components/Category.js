@@ -5,7 +5,7 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Navigation } from "swiper/core";
 import "./Category.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class Category extends Component {
   constructor(props) {
@@ -42,9 +42,9 @@ export default class Category extends Component {
             onSwiper={(swiper) => console.log(swiper)}
           >
             {this.state.category.map((item) => (
-              <SwiperSlide className="swiper-item">
+              <SwiperSlide className="swiper-item" key={item.id}>
                 <ul className="nav-menu">
-                  <li className="nav-item" key={item.id}>
+                  <li className="nav-item">
                     <Link to={`/${item.name}`} className="nav-link">
                       {item.name}
                     </Link>
