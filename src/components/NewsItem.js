@@ -4,15 +4,18 @@ import swal from "sweetalert";
 
 function NewsItem(props) {
   const addToBookmarks = (newData) => {
-    const currentData = [];
+    const currentData = JSON.parse(
+      localStorage.getItem("bookmarks") ||
+        localStorage.setItem("bookmarks", JSON.stringify([]))
+    );
     currentData.push(newData);
     localStorage.setItem("bookmarks", JSON.stringify(currentData));
     swal({
-      title: "Good job!",
-      text: "You clicked the button!",
+      title: "add to bookmark!",
+      text: "Success add to bookmark!",
       icon: "success",
-      button: "Aww yiss!",
-      timer: 2000,
+      button: false,
+      timer: 3000,
     });
   };
   return (
@@ -32,7 +35,7 @@ function NewsItem(props) {
           <p className="publisher">{props.publisher}</p>
           <button
             onClick={() =>
-              addToBookmarks({ name: props.title, source: props.publisher })
+              addToBookmarks({ name: props.title, source: props.publisher, links: props.path })
             }
             className="bookmark-btn"
           >

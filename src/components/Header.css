@@ -1,11 +1,39 @@
-.header {
+.header-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
   background-color: #fff;
+  justify-content: space-between;
+  height: 80px;
 }
 
-.header img {
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
   width: 30%;
+}
+
+.header-bookmarks {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.bookmarks-btn:hover {
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+.bookmarks-btn {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
 }

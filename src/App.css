@@ -10,7 +10,8 @@ body {
 }
 
 .home,
-.showbiz {
+.showbiz,
+.bookmarks {
   position: relative;
   background-color: #fff;
   margin: auto;
@@ -20,4 +21,9 @@ body {
 .home .home-title {
   text-align: center;
   padding-top: 10px;
+}
+
+.bookmarks-title {
+  text-align: center;
+  padding: 20px 0;
 }

@@ -35,6 +35,16 @@ const ParamMapping = (param) => {
     return 12;
   } else if (param === "Corona di RI") {
     return 13;
+  } else if (param === "Games") {
+    return 17;
+  } else if (param === "Kata Gaul") {
+    return 18;
+  } else if (param === "English") {
+    return 19;
+  } else if (param === "Music") {
+    return 20;
+  } else if (param === "Campus") {
+    return 21;
   }
 };
 

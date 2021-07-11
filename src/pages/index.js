@@ -1,5 +1,5 @@
 import Home from "./Home";
 import MainPage from "./MainPage";
-import Bookmark from "./Bookmark";
+import Bookmarks from "./Bookmarks";
 
-export { Home, MainPage, Bookmark };
+export { Home, MainPage, Bookmarks };

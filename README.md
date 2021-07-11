@@ -1,3 +1,7 @@
+# Frontend Technical Test Intern Sejutacita
+
+Mochamad Rizky Zaldi
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
