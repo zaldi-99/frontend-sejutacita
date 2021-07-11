@@ -42,17 +42,14 @@ export default class Hero extends Component {
           navigation={true}
         >
           {this.state.thumbnail.map((item) => (
-            <SwiperSlide>
-              <img src="/assets/images/hero.jpg" alt="" />
-              <p className="text"> {item.title} </p>
+            <SwiperSlide key={item.id}>
+              <img src="/assets/images/heros.jpg" alt="Hero Image" />
+              <Link to={{ pathname: item.url.url }} target="_blank">
+                <p className="text">{item.title}</p>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* {this.state.thumbnail.map((item) => (
-          <Link to={{ pathname: item.url.url }} target="_blank">
-            <p>{item.title}</p>
-          </Link>
-        ))} */}
       </div>
     );
   }

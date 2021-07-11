@@ -1,7 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 function NewsItem(props) {
+  const addToBookmarks = (newData) => {
+    const currentData = [];
+    currentData.push(newData);
+    localStorage.setItem("bookmarks", JSON.stringify(currentData));
+    swal({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success",
+      button: "Aww yiss!",
+      timer: 2000,
+    });
+  };
   return (
     <>
       <div className="news-card">
@@ -16,16 +29,15 @@ function NewsItem(props) {
           >
             <p>{props.title}</p>
           </Link>
-          <Link
-            to={props.publisherLink}
-            className="publisher"
-            target={props.target}
+          <p className="publisher">{props.publisher}</p>
+          <button
+            onClick={() =>
+              addToBookmarks({ name: props.title, source: props.publisher })
+            }
+            className="bookmark-btn"
           >
-            <p>{props.publisher}</p>
-          </Link>
-          <Link to='/bookmark'>
-            <p>add to bookmark</p>
-          </Link>
+            Bookmark
+          </button>
         </div>
       </div>
     </>

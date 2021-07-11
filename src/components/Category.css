@@ -1,17 +1,16 @@
-.category{
+.category {
   background-color: #fff;
   padding: 20px 0;
   margin-bottom: 20px;
 }
 
-.category-wrapper{
+.category-wrapper {
   width: 80%;
   margin: auto;
 }
 
-.nav-item{
+.nav-item {
   list-style: none;
-
 }
 
 .nav-link {
@@ -20,6 +19,13 @@
   cursor: pointer;
   text-decoration: none;
   color: #000;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
+}
+
+.nav-link:hover {
+  background-color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
 }

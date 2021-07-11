@@ -42,10 +42,10 @@ export default class Category extends Component {
             onSwiper={(swiper) => console.log(swiper)}
           >
             {this.state.category.map((item) => (
-              <SwiperSlide className="swiper-item">
+              <SwiperSlide className="swiper-item" key={item.id}>
                 <ul className="nav-menu">
-                  <li className="nav-item" key={item.id}>
-                    <Link to={item.name} className="nav-link">
+                  <li className="nav-item">
+                    <Link to={`/${item.name}`} className="nav-link">
                       {item.name}
                     </Link>
                   </li>
